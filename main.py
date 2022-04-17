@@ -9,7 +9,9 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    coins = my_dbase
+    names = my_dbase.get_all_coin_names()
+    my_json = to_json_names(names)
+    return my_json
 
 
 # http://127.0.0.1:8000/all_hist/bitcoin

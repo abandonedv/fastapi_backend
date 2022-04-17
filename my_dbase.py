@@ -54,32 +54,32 @@ def insert_news_list(news_list):
 
 def my_len_news():
     """Узнать число элементов"""
-    return session.query(News)\
-        .order_by(News.id.desc())\
-        .first()\
+    return session.query(News) \
+        .order_by(News.id.desc()) \
+        .first() \
         .id
 
 
 def my_len_coins():
     """Узнать число элементов"""
-    return session.query(Date)\
-        .order_by(Date.id.desc())\
-        .first()\
+    return session.query(Date) \
+        .order_by(Date.id.desc()) \
+        .first() \
         .id
 
 
 def get_all_news_by_time():
     """Получить все элементы БД отсортированные по времени"""
-    return session.query(News)\
-        .order_by(News.news_time)\
+    return session.query(News) \
+        .order_by(News.news_time) \
         .all()
 
 
 def get_all_coin_hist_by_time(coin_name):
     """Получить все элементы БД отсортированные по времени"""
-    return session.query(Date)\
-        .filter(Date.coin_parse == coin_name)\
-        .order_by(Date.coin_time)\
+    return session.query(Date) \
+        .filter(Date.coin_parse == coin_name) \
+        .order_by(Date.coin_time) \
         .all()
 
 
@@ -96,23 +96,27 @@ def get_range_coin_hist_by_time(params):
 def get_page_coin_hist_by_time(params):
     """Получить элементы по номеру страницы из БД отсортированные по времени"""
     return session.query(Date) \
-        .filter(Date.coin_parse == params.coin_name) \
-        .order_by(Date.coin_time.desc()) \
-        .all()[params.page * params.n_rows - params.n_rows:params.page * params.n_rows]
+               .filter(Date.coin_parse == params.coin_name) \
+               .order_by(Date.coin_time.desc()) \
+               .all()[params.page * params.n_rows - params.n_rows:params.page * params.n_rows]
+
+
+def get_all_coin_names():
+    return session.query(Date.coin_parse).distinct().all()
 
 
 def get_time_of_last_update_of_coin(coin_name):
     """Узнать число элементов"""
-    return session.query(Date)\
-        .filter(Date.coin_parse == coin_name)\
-        .order_by(Date.coin_time.desc())\
-        .first()\
+    return session.query(Date) \
+        .filter(Date.coin_parse == coin_name) \
+        .order_by(Date.coin_time.desc()) \
+        .first() \
         .coin_time
 
 
 def get_time_of_last_news():
     """Узнать число элементов"""
-    return session.query(News)\
-        .order_by(News.news_time.desc())\
-        .first()\
+    return session.query(News) \
+        .order_by(News.news_time.desc()) \
+        .first() \
         .news_time

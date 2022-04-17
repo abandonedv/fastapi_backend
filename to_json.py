@@ -1,6 +1,17 @@
 import pprint
 
 
+def to_json_names(names):
+    my_json = {}
+
+    new_list_of_names = []
+    for name in names:
+        n = name
+        new_list_of_names.append(n)
+    my_json["all_names"] = new_list_of_names
+    return my_json
+
+
 def to_json_all(name, list_of_prices):
     my_json = {"coin_name": name}
 
