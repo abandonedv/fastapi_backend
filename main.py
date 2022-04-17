@@ -3,6 +3,10 @@ from fastapi import FastAPI, Depends
 import my_dbase
 from to_json import *
 from my_valids import *
+from pyngrok import ngrok
+from fastapi.responses import JSONResponse
+
+MY_HEADER = {"Access-Control-Allow-Origin": "*"}
 
 app = FastAPI()
 
@@ -11,7 +15,7 @@ app = FastAPI()
 async def root():
     names = my_dbase.get_all_coin_names()
     my_json = to_json_names(names)
-    return my_json
+    return JSONResponse(content=my_json, headers={"Access-Control-Allow-Origin": "*"})
 
 
 # http://127.0.0.1:8000/all_hist/bitcoin
@@ -39,4 +43,11 @@ async def page_and_limit(params: History_Page_Param_Valid = Depends(History_Page
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app")
+    PORT = 8000
+    http_tunnel = ngrok.connect(8000, bind_tls=True)
+    public_url = http_tunnel.public_url
+    print(http_tunnel)
+    HOST_URL = public_url
+    print(HOST_URL)
+
+    uvicorn.run("main:app", port=8000)

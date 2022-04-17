@@ -102,7 +102,10 @@ def get_page_coin_hist_by_time(params):
 
 
 def get_all_coin_names():
-    return session.query(Date.coin_parse).distinct().all()
+    return session.query(Date) \
+               .order_by(Date.coin_time.desc()) \
+               .limit(20) \
+               .all()
 
 
 def get_time_of_last_update_of_coin(coin_name):

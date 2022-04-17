@@ -6,8 +6,9 @@ def to_json_names(names):
 
     new_list_of_names = []
     for name in names:
-        n = name
-        new_list_of_names.append(n)
+        new_list_of_names.append({"coin_name": name.coin_parse,
+                                  "coin_value": name.coin_value,
+                                  "coin_time": name.coin_time})
     my_json["all_names"] = new_list_of_names
     return my_json
 
@@ -47,3 +48,5 @@ def to_json_page(params, list_of_prices):
 
     my_json["history_list"] = new_list_of_prices
     return my_json
+
+
