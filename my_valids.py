@@ -36,3 +36,13 @@ class History_Page_Resp_Valid(BaseModel):
     page: int
     n_rows: int
     history_list: List[History_Item_Valid]
+
+
+class News_Range_Param_Valid(BaseModel):
+    time_begin: str
+    time_end: str
+
+
+class News_Page_Param_Valid(BaseModel):
+    page: int
+    n_rows: int

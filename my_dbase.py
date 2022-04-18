@@ -93,11 +93,27 @@ def get_range_coin_hist_by_time(params):
         .all()
 
 
+def get_range_news_hist_by_time(params):
+    """Получить элементы в диапазоне из БД отсортированные по времени"""
+    return session.query(News) \
+        .filter(News.news_time >= params.time_begin,
+                News.news_time <= params.time_end) \
+        .order_by(News.news_time) \
+        .all()
+
+
 def get_page_coin_hist_by_time(params):
     """Получить элементы по номеру страницы из БД отсортированные по времени"""
     return session.query(Date) \
                .filter(Date.coin_parse == params.coin_name) \
                .order_by(Date.coin_time.desc()) \
+               .all()[params.page * params.n_rows - params.n_rows:params.page * params.n_rows]
+
+
+def get_page_news_hist_by_time(params):
+    """Получить элементы по номеру страницы из БД отсортированные по времени"""
+    return session.query(News) \
+               .order_by(News.news_time.desc()) \
                .all()[params.page * params.n_rows - params.n_rows:params.page * params.n_rows]
 
 
