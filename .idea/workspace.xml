@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2da34b5-9b85-4961-a2b8-afdc6b436bb3" name="Changes" comment="fixes">
+    <list default="true" id="e2da34b5-9b85-4961-a2b8-afdc6b436bb3" name="Changes" comment="news added">
+      <change beforePath="$PROJECT_DIR$/.idea/diplom_fastapi_backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diplom_fastapi_backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_dbase.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_dbase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_valids.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_valids.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_json.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,7 @@
         <option value="FastAPI main" />
         <option value="FastAPI test_main" />
         <option value="Python Script" />
+        <option value="Blank Requirements File" />
       </list>
     </option>
   </component>
@@ -356,7 +355,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.my_dbase" />
         <item itemvalue="Python.my_dbase (1)" />
+        <item itemvalue="Python.my" />
       </list>
     </recent_temporary>
   </component>
@@ -377,7 +379,18 @@
       <workItem from="1650298837093" duration="593000" />
       <workItem from="1650299809538" duration="1765000" />
       <workItem from="1650302782396" duration="1931000" />
-      <workItem from="1650309130947" duration="3457000" />
+      <workItem from="1650309130947" duration="6412000" />
+      <workItem from="1650326613208" duration="736000" />
+      <workItem from="1650391426303" duration="6985000" />
+      <workItem from="1650454125473" duration="1414000" />
+      <workItem from="1650478126507" duration="21000" />
+      <workItem from="1650478181625" duration="605000" />
+      <workItem from="1650482271616" duration="640000" />
+      <workItem from="1650492340027" duration="1602000" />
+      <workItem from="1650556125594" duration="1799000" />
+      <workItem from="1650581868611" duration="522000" />
+      <workItem from="1650727631081" duration="851000" />
+      <workItem from="1650744552338" duration="836000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1650157958210</created>
@@ -400,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650219478098</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="news added">
+      <created>1650312858983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650312858983</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,10 +440,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="news added" />
+    <option name="LAST_COMMIT_MESSAGE" value="news added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_dbase__1_.coverage" NAME="my_dbase (1) Coverage Results" MODIFIED="1650207957515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1650312669404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1650744663667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
