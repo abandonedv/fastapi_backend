@@ -1,4 +1,9 @@
+# user = "postgres"
+# password = "vadim"
+# host = "localhost"
+# db_name = "Diplom"
+
 user = "postgres"
-password = "vadim"
+password = "mysecretpassword"
 host = "localhost"
-db_name = "Diplom"
+db_name = "postgres"

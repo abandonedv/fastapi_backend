@@ -6,6 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from config import user, password, host, db_name
 from my_schemas import base, Date, News
 
+# psql -h localhost -p 5432 -U postgres -d Diplom
 DB_STR = f"postgresql+psycopg2://{user}:{password}@{host}/{db_name}"
 
 db = create_engine(DB_STR)
@@ -137,5 +138,4 @@ def get_time_of_last_news():
     """Узнать число элементов"""
     return session.query(News) \
         .order_by(News.news_time.desc()) \
-        .first() \
-        .news_time
+        .first()
