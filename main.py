@@ -58,4 +58,4 @@ async def news_page(params: News_Page_Param_Valid = Depends(News_Page_Param_Vali
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=8000)
+    uvicorn.run("main:app")

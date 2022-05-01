@@ -1,14 +1,21 @@
 import datetime
 
-from sqlalchemy import create_engine, select, desc
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from config import user, password, host, db_name
 from my_schemas import base, Date, News
 
 # psql -h localhost -p 5432 -U postgres -d Diplom
-DB_STR = f"postgresql+psycopg2://{user}:{password}@{host}/{db_name}"
+DB_STR = f"sqlite:///new_file"
 
+# user = "postgres"
+# password = "vadim"
+# host = "localhost"
+# db_name = "Diplom"
+#
+# DB_STR = f"postgresql+psycopg2://{user}:{password}@{host}/{db_name}"
+
+# db = psycopg2.connect(host=config.host, database=config.db_name, user=config.user, password=config.password)
 db = create_engine(DB_STR)
 
 Session = sessionmaker(db)
@@ -120,9 +127,9 @@ def get_page_news_hist_by_time(params):
 
 def get_all_coin_names():
     return session.query(Date) \
-               .order_by(Date.coin_time.desc()) \
-               .limit(20) \
-               .all()
+        .order_by(Date.coin_time.desc()) \
+        .limit(20) \
+        .all()
 
 
 def get_time_of_last_update_of_coin(coin_name):
