@@ -4,14 +4,9 @@ from to_json import *
 from my_valids import *
 from fastapi.responses import JSONResponse
 from my_functions import *
-import sys
 from fastapi_utils.tasks import repeat_every
+from my_update import main_update
 
-sys.path.insert(0, './update')
-from update.my_update import main_update
-
-
-sys.path.insert(0, './update')
 MY_HEADER = {"Access-Control-Allow-Origin": "*"}
 
 app = FastAPI()
