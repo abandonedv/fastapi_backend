@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2da34b5-9b85-4961-a2b8-afdc6b436bb3" name="Changes" comment="requirements added">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="e2da34b5-9b85-4961-a2b8-afdc6b436bb3" name="Changes" comment="dockerfile added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_dbase.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_dbase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_dbase.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +19,8 @@
       <list>
         <option value="FastAPI main" />
         <option value="FastAPI test_main" />
-        <option value="Python Script" />
         <option value="Blank Requirements File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -408,8 +404,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Python.my_dbase (1)" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.my_dbase (1)" />
       </list>
@@ -460,7 +456,9 @@
       <workItem from="1651271704245" duration="6236000" />
       <workItem from="1651326592377" duration="1101000" />
       <workItem from="1651328028313" duration="13771000" />
-      <workItem from="1651364034990" duration="770000" />
+      <workItem from="1651364034990" duration="956000" />
+      <workItem from="1651410128883" duration="12992000" />
+      <workItem from="1651794400142" duration="1103000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1650157958210</created>
@@ -504,7 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651264369539</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dockerfile added">
+      <created>1651365026951</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651365026952</updated>
+    </task>
+    <task id="LOCAL-00008" summary="dockerfile added">
+      <created>1651365068342</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651365068342</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,22 +538,12 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="news added" />
     <MESSAGE value="requirements added" />
-    <option name="LAST_COMMIT_MESSAGE" value="requirements added" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="dockerfile added" />
+    <option name="LAST_COMMIT_MESSAGE" value="dockerfile added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_dbase__1_.coverage" NAME="my_dbase (1) Coverage Results" MODIFIED="1651343718780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1651364048753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_dbase__1_.coverage" NAME="my_dbase (1) Coverage Results" MODIFIED="1651442226950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1651795510589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1651327577938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
