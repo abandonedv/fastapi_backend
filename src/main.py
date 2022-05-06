@@ -1,22 +1,30 @@
 import uvicorn
 from fastapi import FastAPI, Depends
-import my_dbase
 from to_json import *
 from my_valids import *
 from fastapi.responses import JSONResponse
 from my_functions import *
+import sys
+from fastapi_utils.tasks import repeat_every
 
+sys.path.insert(0, './update')
+from update.my_update import main_update
+
+
+sys.path.insert(0, './update')
 MY_HEADER = {"Access-Control-Allow-Origin": "*"}
 
 app = FastAPI()
 
 
+@app.on_event("startup")
+@repeat_every(seconds=60 * 60)
+async def update():
+    await main_update()
+
+
 @app.get("/")
 async def root():
-    # names = my_dbase.get_all_coin_names()
-    # names_obj_list = []
-    # for name in names:
-    #     names_obj_list.append(my_dbase.get_last_update_of_coin(name))
     names_obj_list = get_names_obj_list()
     my_json = to_json_names(names_obj_list)
     return JSONResponse(content=my_json, headers=MY_HEADER)

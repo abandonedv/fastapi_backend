@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from my_schemas import base, Date, News
-from config import *
+from src.config import *
 
 # psql -h localhost -p 5432 -U postgres -d Diplom
 
