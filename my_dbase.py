@@ -4,18 +4,12 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from my_schemas import base, Date, News
+from config import *
 
 # psql -h localhost -p 5432 -U postgres -d Diplom
-DB_STR = f"sqlite:///new_file"
 
-# user = "postgres"
-# password = "vadim"
-# host = "localhost"
-# db_name = "Diplom"
-#
-# DB_STR = f"postgresql+psycopg2://{user}:{password}@{host}/{db_name}"
+DB_STR = f"postgresql+psycopg2://{user}:{password}@{host}/{db_name}"
 
-# db = psycopg2.connect(host=config.host, database=config.db_name, user=config.user, password=config.password)
 db = create_engine(DB_STR)
 
 Session = sessionmaker(db)
@@ -30,17 +24,19 @@ def insert_coin_list(datas):
     for date in datas:
         c = Date(coin_parse=date.coin_parse,
                  coin_time=date.coin_time,
+                 coin_time_in_sec=date.coin_time_in_sec,
                  coin_value=date.coin_value,
                  update_time=update_time)
         session.add(c)
     session.commit()
 
 
-def insert_one_coin(date):
+async def insert_one_coin(date):
     """Вставляем один элемент"""
     update_time = str(datetime.datetime.now())
     c = Date(coin_parse=date.coin_parse,
              coin_time=date.coin_time,
+             coin_time_in_sec=date.coin_time_in_sec,
              coin_value=date.coin_value,
              update_time=update_time)
     session.add(c)
@@ -57,6 +53,19 @@ def insert_news_list(news_list):
                  news_lead=news.news_lead_p,
                  update_time=update_time)
         session.add(c)
+    session.commit()
+
+
+def delete_coins(border):
+    return session.query(Date). \
+        filter(Date.coin_time_in_sec > 1651664340). \
+        all()
+
+
+def delete_coins1(border):
+    session.query(Date). \
+        filter(Date.coin_time_in_sec > 1651664340). \
+        delete()
     session.commit()
 
 
@@ -125,11 +134,20 @@ def get_page_news_hist_by_time(params):
                .all()[params.page * params.n_rows - params.n_rows:params.page * params.n_rows]
 
 
+# def get_all_coin_names():
+#     return session.query(Date) \
+#         .order_by(Date.coin_time.desc()) \
+#         .limit(20) \
+#         .all()
+
 def get_all_coin_names():
-    return session.query(Date) \
-        .order_by(Date.coin_time.desc()) \
-        .limit(20) \
+    row_list = session.query(Date) \
+        .distinct(Date.coin_parse) \
         .all()
+    name_list = []
+    for item in row_list:
+        name_list.append(item.coin_parse)
+    return name_list
 
 
 def get_time_of_last_update_of_coin(coin_name):
@@ -138,7 +156,15 @@ def get_time_of_last_update_of_coin(coin_name):
         .filter(Date.coin_parse == coin_name) \
         .order_by(Date.coin_time.desc()) \
         .first() \
-        .coin_time
+        .coin_time_in_sec
+
+
+def get_last_update_of_coin(coin_name):
+    """Узнать число элементов"""
+    return session.query(Date) \
+        .filter(Date.coin_parse == coin_name) \
+        .order_by(Date.coin_time.desc()) \
+        .first()
 
 
 def get_time_of_last_news():
