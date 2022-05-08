@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2da34b5-9b85-4961-a2b8-afdc6b436bb3" name="Changes" comment="auto-update added">
+    <list default="true" id="e2da34b5-9b85-4961-a2b8-afdc6b436bb3" name="Changes" comment="works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/update/coin_market_cap_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/coin_market_cap_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/update/my_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/update/my_schemas.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/update/my_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_update.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/update/time_const.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_const.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/update/time_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auto_update.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +128,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="auto_update" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="diplom_fastapi_backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/autoupdate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Vadim\Documents\GitHub\diplom_fastapi_backend\src\auto_update.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -294,28 +312,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="my_update" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="diplom_fastapi_backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/autoupdate" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Vadim\Documents\GitHub\diplom_fastapi_backend\src\my_update.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="Python.FastAPI">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -438,8 +434,9 @@
     </configuration>
     <list>
       <item itemvalue="FastAPI.backend" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.auto_update" />
       <item itemvalue="Python.my_update" />
-      <item itemvalue="Python.my_update (3)" />
       <item itemvalue="Python.my_update (1)" />
       <item itemvalue="Python.my_update (2)" />
       <item itemvalue="Python.main (1)" />
@@ -447,8 +444,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.my_update (3)" />
-        <item itemvalue="Python.my_update (3)" />
+        <item itemvalue="Python.auto_update" />
         <item itemvalue="Python.my_update (2)" />
         <item itemvalue="Python.my_update (1)" />
       </list>
@@ -503,7 +499,7 @@
       <workItem from="1651410128883" duration="12992000" />
       <workItem from="1651794400142" duration="1434000" />
       <workItem from="1651857973233" duration="787000" />
-      <workItem from="1651858774011" duration="7766000" />
+      <workItem from="1651858774011" duration="9258000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1650157958210</created>
@@ -582,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651861765220</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="works">
+      <created>1651867466838</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651867466838</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +610,8 @@
     <MESSAGE value="dockerfile added" />
     <MESSAGE value="little fixes" />
     <MESSAGE value="auto-update added" />
-    <option name="LAST_COMMIT_MESSAGE" value="auto-update added" />
+    <MESSAGE value="works" />
+    <option name="LAST_COMMIT_MESSAGE" value="works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -625,7 +629,7 @@
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_update.coverage" NAME="my_update Coverage Results" MODIFIED="1651859378996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/my_update" />
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_update__2_.coverage" NAME="my_update (2) Coverage Results" MODIFIED="1651862143178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/auto-update" />
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_update__3_.coverage" NAME="my_update (3) Coverage Results" MODIFIED="1651867151901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/autoupdate" />
-    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1651867330412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1651868230079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1651327577938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_dbase.coverage" NAME="my_dbase Coverage Results" MODIFIED="1651859125762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/diplom_fastapi_backend$my_update__1_.coverage" NAME="my_update (1) Coverage Results" MODIFIED="1651861716188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/update" />

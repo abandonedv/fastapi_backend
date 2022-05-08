@@ -29,7 +29,7 @@ def time_data(tm, time_need=False):
     if len(date) == 1:
         date = "0" + date
 
-    if time_need == True:
+    if time_need:
         time_list = tm[11:19].split(":")
         my_time = time_list[0] + "-" + time_list[1] + "-" + time_list[2]
         dt = year + "-" + month + "-" + date + "-" + my_time

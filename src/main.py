@@ -5,7 +5,8 @@ from my_valids import *
 from fastapi.responses import JSONResponse
 from my_functions import *
 from fastapi_utils.tasks import repeat_every
-from my_update import main_update
+from auto_update import main_update
+from time_const import HOUR
 
 MY_HEADER = {"Access-Control-Allow-Origin": "*"}
 
@@ -13,7 +14,7 @@ app = FastAPI()
 
 
 @app.on_event("startup")
-@repeat_every(seconds=60 * 60)
+@repeat_every(seconds=HOUR)
 async def update():
     await main_update()
 
