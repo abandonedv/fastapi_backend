@@ -49,12 +49,12 @@ async def find_new(coin_name):
                              new_row["v"][0])
         print(hour_date)
         await my_dbase.insert_one_coin(hour_date)
-        t_s = t_e
-        t_e = t_e + HOUR
+        t_s, t_e = t_e, t_e + HOUR
+        # t_e = t_e + HOUR
 
 
 async def main_update():
-    """Получаем список названий криптовалют и через цикр начинаем проверку"""
+    """Получаем список названий криптовалют и через цикл начинаем проверку"""
     crypt_list = my_dbase.get_all_coin_names()
     for coin_name in crypt_list:
         await find_new(coin_name)
