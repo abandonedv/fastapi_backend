@@ -9,4 +9,4 @@ COPY . .
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
 
 #docker build -t fastapi_image .
-#docker run --name fastapi_container1 --net=host -p 80:80 fastapi_image
+#docker run --name fastapi_container --net=host -p 80:80 fastapi_image
