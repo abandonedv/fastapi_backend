@@ -12,10 +12,10 @@ MY_HEADER = {"Access-Control-Allow-Origin": "*"}
 
 app = FastAPI()
 
-@app.on_event("startup")
-@repeat_every(seconds=HOUR)
-async def update():
-    await main_update()
+# @app.on_event("startup")
+# @repeat_every(seconds=HOUR)
+# async def update():
+#     await main_update()
 
 
 @app.get("/")
