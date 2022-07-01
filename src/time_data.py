@@ -1,30 +1,21 @@
+month_d = {"Jan": "01",
+           "Feb": "02",
+           "Mar": "03",
+           "Apr": "04",
+           "May": "05",
+           "Jun": "06",
+           "Jul": "07",
+           "Aug": "08",
+           "Sep": "09",
+           "Oct": "10",
+           "Nov": "11",
+           "Dec": "12"}
+
+
 def time_data(tm, time_need=False):
     year = tm[-4:]
     month = tm[4:7]
-    if month == "Jan":
-        month = "01"
-    elif month == "Feb":
-        month = "02"
-    elif month == "Mar":
-        month = "03"
-    elif month == "Apr":
-        month = "04"
-    elif month == "May":
-        month = "05"
-    elif month == "Jun":
-        month = "06"
-    elif month == "Jul":
-        month = "07"
-    elif month == "Aug":
-        month = "08"
-    elif month == "Sep":
-        month = "09"
-    elif month == "Oct":
-        month = "10"
-    elif month == "Nov":
-        month = "11"
-    elif month == "Dec":
-        month = "12"
+    month = month_d[month]
     date = tm[8:10].split(" ")[-1]
     if len(date) == 1:
         date = "0" + date
